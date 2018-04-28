@@ -3,24 +3,24 @@ Performance of Loadable Kernel Module and User Space Module for Temperature Sens
 
 Refer this file to compile and run the code!
 
-USER LEVEL NON-THREADED:
+### USER LEVEL NON-THREADED:
 Directory: /user_module/
 1. Compile: gcc -o user_module user_module.c -lwiringPi -lm
 2. Run: sudo ./user_module
 
-USER LEVEL THREADED:
+### USER LEVEL THREADED:
 Directory: /user_thread_module/user_thread_module/
 1. Compile: gcc -o user_thread_module.c -lwiringPi -lm -pthread
 2. Run: sudo ./user_thread_module
 
-KERNEL LEVEL NON-THREADED:
+### KERNEL LEVEL NON-THREADED:
 Directory: /kernel_module/
 1. Compile: make (Create Makefile)
 2. Run (Insert the module): sudo insmod kernel_module.ko
 3. Observe the output: dmesg (last enteries)
 4. To remove the module: sudo rmmod kernel_module.ko
 
-KERNEL LEVEL THREADED:
+### KERNEL LEVEL THREADED:
 Directory: /kernel_thread_module/kernel_thread_module/
 1. Compile: make (Create Makefile)
 2. Run (Insert the module): sudo insmod kernel_thread_module.ko
